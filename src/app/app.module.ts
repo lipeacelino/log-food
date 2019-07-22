@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { AuthService } from './login/auth.service';
-import { LojasComponent } from './lojas/lojas.component'
+import { LojasComponent } from './lojas/lojas.component';
 
 @NgModule({
   declarations: [
