@@ -12,16 +12,25 @@ export class AuthService {
   private usuarioStatusAutenticacao: boolean = false;
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email == "usuario@gmail.com" && 
+    if (usuario.email == "felipe@gmail.com" && 
         usuario.senha == "12345") {
       //o método deve redirecionar para a tela de lojas (padarias/lanchonetes)
-      setTimeout(() => {this.router.navigate(['/home']);}, 2000); 
+      setTimeout(() => {this.router.navigate(['/home']);}, 1500);
+      sessionStorage.setItem('username', 'Felipe'); 
       console.log("método invocado no service")
       this.usuarioStatusAutenticacao = true;
     } 
   }
 
   usuarioEstaAutenticado() {
-    return this.usuarioStatusAutenticacao
+    if (sessionStorage.getItem('username') !== null){
+      return this.usuarioStatusAutenticacao;
+    }
+    return this.usuarioStatusAutenticacao;
+  }
+
+  fazerLogout() {
+    sessionStorage.setItem('username', null);
+    setTimeout(() => {this.router.navigate(['/home']);}, 1500);
   }
 }
