@@ -9,6 +9,9 @@ import { routing } from './app.routing';
 import { AuthService } from './login/auth.service';
 import { DashPedidosComponent } from './dashboard/dash-pedidos/dash-pedidos.component';
 import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.component';
+import { LojasComponent } from './lojas/lojas.component';
+import { ProdutoComponent } from './produto/produto.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.c
     HomeComponent,
     LoginComponent,
     DashPedidosComponent,
-    DashProdutosComponent
+    DashProdutosComponent,
+    LojasComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
