@@ -4,6 +4,15 @@
   width: 25%;
 }
 
+.pedido {
+  margin-top: 5%;
+}
+
+.select-pedido {
+  width: 40%;
+  height: 15%;
+}
+
 body {
   color: #555;
 }
