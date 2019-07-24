@@ -11,6 +11,8 @@ import { DashPedidosComponent } from './dashboard/dash-pedidos/dash-pedidos.comp
 import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.component';
 import { LojasComponent } from './lojas/lojas.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ProdutoComponent } from './produto/produto.component';
     DashPedidosComponent,
     DashProdutosComponent,
     LojasComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    CarrinhoComponent,
+    ConfirmacaoComponent
   ],
   imports: [
     BrowserModule,
