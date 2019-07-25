@@ -4,12 +4,21 @@
   width: 25%;
 }
 
-.pedido {
+.btn-tam-padrao1 {
+  width: 15%;
+}
+
+.margem-top {
+  margin-top: 5%;
+}
+
+.margem-auto {
+  margin: auto;
   margin-top: 5%;
 }
 
 .select-pedido {
-  width: 40%;
+  width: 13%;
   height: 15%;
 }
 
