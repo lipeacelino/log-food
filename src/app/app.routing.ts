@@ -16,11 +16,13 @@ import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
 import { PedidosComponent } from './usuario/pedidos/pedidos.component';
 import { DetalhesPedidoUsuarioComponent } from './usuario/pedidos/detalhes-pedido/detalhes-pedido-usuario.component'
 import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-usuario.component';
-
+import { PerfilComponent } from './usuario/perfil/perfil.component';
+import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
 
 const APP_ROUTES: Routes = [
     //as rotas devem ser colocadas aqui
     //p = proprietário
+    //u = proprietário
     { path: '', component: HomeComponent, /*canActivate: [AuthGuard]*/},
     { path: 'home', component: HomeComponent, /*canActivate: [AuthGuard]*/},
     { path: 'login', component: LoginComponent },
@@ -37,7 +39,9 @@ const APP_ROUTES: Routes = [
     { path: 'p/home', component: DashHomeComponent},
     { path: 'u/pedidos', component: PedidosComponent},
     { path: 'u/pedidos/detalhes', component: DetalhesPedidoUsuarioComponent}, //detalhe de pedido do usuário
-    { path: 'u/cadastro', component: CadastroUsuarioComponent}
+    { path: 'u/cadastro', component: CadastroUsuarioComponent},
+    { path: 'u/perfil', component: PerfilComponent},
+    { path: 'u/editar-perfil', component: EditarPerfilComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
