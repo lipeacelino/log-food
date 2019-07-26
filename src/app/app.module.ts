@@ -19,6 +19,7 @@ import { EditProdutosComponent } from './dashboard/dash-produtos/edit-produtos/e
 import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
 import { PedidosComponent } from './usuario/pedidos/pedidos.component';
 import { DetalhesPedidoUsuarioComponent } from './usuario/pedidos/detalhes-pedido/detalhes-pedido-usuario.component';
+import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-usuario.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DetalhesPedidoUsuarioComponent } from './usuario/pedidos/detalhes-pedid
     EditProdutosComponent,
     DashHomeComponent,
     PedidosComponent,
-    DetalhesPedidoUsuarioComponent
+    DetalhesPedidoUsuarioComponent,
+    CadastroUsuarioComponent
   ],
   imports: [
     BrowserModule,
