@@ -13,6 +13,10 @@ import { LojasComponent } from './lojas/lojas.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
+import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedidos/detalhes-pedidos.component';
+import { AddProdutosComponent } from './dashboard/dash-produtos/add-produtos/add-produtos.component';
+import { EditProdutosComponent } from './dashboard/dash-produtos/edit-produtos/edit-produtos.component';
+import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
     LojasComponent,
     ProdutoComponent,
     CarrinhoComponent,
-    ConfirmacaoComponent
+    ConfirmacaoComponent,
+    DetalhesPedidosComponent,
+    AddProdutosComponent,
+    EditProdutosComponent,
+    DashHomeComponent
   ],
   imports: [
     BrowserModule,

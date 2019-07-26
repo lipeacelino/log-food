@@ -1,4 +1,4 @@
-<div class="box box-solid box-danger pedido">
+<div class="box box-danger margem-top">
     <div class="box-header with-border">
         <h3 class="box-title">Pedidos</h3>
         <!--
@@ -15,102 +15,65 @@
             <table class="table no-margin">
                 <thead>
                     <tr>
+                        <th>Data/Hora</th>
                         <th>Nº de Pedido</th>
-                        <th>Produto</th>
                         <th>Status</th>
-                        <th>Endereço</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                        <td>1 Pizza Calabresa Média, 2 Pizza Marguerita Grande</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR9842</a></td>
+                        
+                        <td><span class="label label-success">Entregue</span></td>
                         
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                        <td> 2 Pastéis de Frango, 1 Coxinha de Charque</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR1848</a></td>
+                        
+                        <td><span class="label label-warning">Processando</span></td>
+                       
                         
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>1 Joelho, 1 Bolo de Cenoura</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR7429</a></td>
+                        
+                        <td><span class="label label-primary">Em Preparação</span></td>
+                        
                         
                         
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>4 Enroladinho</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR7429</a></td>
+                        
+                        <td><span class="label label-info">Enviado</span></td>
+                        
                         
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                        <td>5 Pudim De Leite</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR1848</a></td>
+                        
+                        <td><span class="label label-info">Enviado</span></td>
+                        
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>4 Empada Doce, 3 Cocorote</td>
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR7429</a></td>
+                        
+                        <td><span class="label label-danger">Recusado</span></td>
+                        
                     </tr>
                     <tr>
-                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                        <td>5 Pastel de Carne</td>
+                        <td>25/07/2019 - 20:01</td>
+                        <td><a [routerLink]="[ '/p/pedidos/detalhes']">OR9842</a></td>
+                        
                         <!--- aquiiiiiiii -->
-                        <td><select class="form-control select-pedido">
-                            <option>Processando</option>
-                            <option>Em Preparação</option>
-                            <option>Enviado</option>
-                            <option>Entregue</option>
-                            <option>Recusado</option>
-                          </select></td>
-                        <td>Rua de Cima</td>
+                        <td><span class="label label-primary">Em Preparação</span></td>
+                        
                     </tr>
                 </tbody>
             </table>
@@ -121,8 +84,10 @@
     
     <div class="box-footer clearfix">
         <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a> -->
-        <button type="button" class="btn btn-lg btn-primary pull-right">Atualizar</button>
+        <!-- <button type="button" class="btn btn-lg btn-primary pull-right">Atualizar</button> -->
     </div>
     
     <!-- /.box-footer -->
 </div>
+
+<div style="margin-top: 5%"></div>
