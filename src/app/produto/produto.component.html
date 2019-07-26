@@ -73,7 +73,7 @@
                           <span class="menu-item-info-box-text">Classic Burger</span>
                           <span class="menu-item-info-box-detail">Blend 100g, Queijo Cheddar, Cebola Caramelizada, Bacon Crocante, Maionese de Casa no Pão Australiano.</span>
                           <span class="menu-item-info-box-price">R$ 12,99</span>
-                          <a class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
+                          <a [routerLink]="['/carrinho']"><i class="fa fa-plus-circle"></i>Adicionar<span class="sr-only">(current)</span></a>
                         </div>
                         <!-- /.info-box-content -->
                       </div>
@@ -133,7 +133,7 @@
                     <div class="box-footer">
                       <div class="pull-right">
                         <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Limpar</button>
-                        <a href="/#" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
+                        <a [routerLink]="['/carrinho']" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
                       </div>
                     </div>
                 </div>

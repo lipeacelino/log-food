@@ -11,6 +11,8 @@ import { DashPedidosComponent } from './dashboard/dash-pedidos/dash-pedidos.comp
 import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.component';
 import { LojasComponent } from './lojas/lojas.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
 import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedidos/detalhes-pedidos.component';
 import { AddProdutosComponent } from './dashboard/dash-produtos/add-produtos/add-produtos.component';
 import { EditProdutosComponent } from './dashboard/dash-produtos/edit-produtos/edit-produtos.component';
@@ -27,6 +29,8 @@ import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
     DashProdutosComponent,
     LojasComponent,
     ProdutoComponent,
+    CarrinhoComponent,
+    ConfirmacaoComponent,
     DetalhesPedidosComponent,
     AddProdutosComponent,
     EditProdutosComponent,
