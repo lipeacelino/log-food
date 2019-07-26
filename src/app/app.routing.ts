@@ -41,7 +41,7 @@ const APP_ROUTES: Routes = [
     { path: 'u/pedidos/detalhes', component: DetalhesPedidoUsuarioComponent}, //detalhe de pedido do usuário
     { path: 'u/cadastro', component: CadastroUsuarioComponent},
     { path: 'u/perfil', component: PerfilComponent},
-    { path: 'u/editar-perfil', component: EditarPerfilComponent}
+    { path: 'u/perfil/edit', component: EditarPerfilComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
