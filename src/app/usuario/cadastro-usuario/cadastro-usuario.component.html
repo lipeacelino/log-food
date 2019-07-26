@@ -1,0 +1,56 @@
+<div class="box box-danger margem-auto" style="width: 50%">
+    <div class="box-header with-border">
+      <h3 class="box-title">Crie sua conta</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form" _lpchecked="1">
+      <div class="box-body">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="number" min="3" class="form-control" step=1 id="nome" placeholder="Nome"
+            autocomplete="off">
+            
+        </div>
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome</label>
+          <input type="number" min="3" class="form-control" step=1 id="sobrenome" placeholder="Sobrenome"
+            autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="nome-do-produto">Email</label>
+          <input type="email" class="form-control" id="nome-do-produto" placeholder="Email" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="password1">Senha:</label>
+          <input type="password" class="form-control" id="password1" placeholder="Senha" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="password2">Repita a senha:</label>
+            <input type="password" class="form-control" id="password2" placeholder="Repita a senha" autocomplete="off">
+          </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Escolha uma foto de perfil</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Carregue a foto do no formato .png ou .img</p>
+        </div>
+  
+  
+        <!--
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Check me out
+                </label>
+              </div>
+            -->
+      </div>
+      <!-- /.box-body -->
+  
+      <div class="box-footer">
+        <a [routerLink]="[ '/login' ]" type="submit" class="btn btn-default pull-left"> Cancelar</a>
+        <button type="submit" class="btn btn-primary pull-right"> Criar Conta</button>
+      </div>
+    </form>
+  </div>
+  
+  <div style="margin-top:5%"></div>

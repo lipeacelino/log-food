@@ -176,10 +176,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Pedidos</a>
+                  <a [routerLink]="[ '/u/pedidos' ]" class="btn btn-default btn-flat">Pedidos</a>
                 </div>
                 <div class="pull-right">
-                  <a (click)="fazerLogout()" class="btn btn-default btn-flat">Sair</a>
+                  <button (click)="fazerLogout()" class="btn btn-default btn-flat">Sair</button>
                 </div>
               </li>
             </ul>
