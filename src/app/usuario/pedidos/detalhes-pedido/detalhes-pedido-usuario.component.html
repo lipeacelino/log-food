@@ -12,7 +12,7 @@
     <!-- info row -->
     <div class="row invoice-info">
         <div class="col-sm-4 invoice-col">
-            <strong>Dados do comprador:</strong>
+            <strong>Seus dados:</strong>
             <address>
                 <address>
                     João da Nica<br>
@@ -142,9 +142,10 @@
     <div class="row no-print">
         <div class="col-xs-12">
             <!-- <a href="invoice-print.html" target="_blank" class="btn btn-lg"><i class="fa fa-chevron-left"></i> Voltar</a> -->
-            <a [routerLink]="[ '/p/pedidos' ]" type="button" class="btn-tam-padrao1 btn btn-default pull-left"><i
+            <a [routerLink]="[ '/u/pedidos' ]" type="button" class="btn-tam-padrao1 btn btn-default pull-left"><i
                     class="fa fa-caret-square-o-left"></i> Voltar
             </a>
+            <!--
             <button type="button" class="btn-tam-padrao1 btn btn-primary pull-right">
                 <i class="fa fa-check-square-o"></i> Atualizar Status
             </button>
@@ -156,8 +157,7 @@
                     <option>Enviado</option>
                     <option>Entregue</option>
                     <option>Recusado</option>
-            </select>
-
+            </select> -->
 
         </div>
     </div>
