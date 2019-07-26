@@ -13,6 +13,8 @@ import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedi
 import {AddProdutosComponent} from './dashboard/dash-produtos/add-produtos/add-produtos.component'
 import { EditProdutosComponent } from './dashboard/dash-produtos/edit-produtos/edit-produtos.component';
 import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
+import { PedidosComponent } from './usuario/pedidos/pedidos.component';
+import { DetalhesPedidoUsuarioComponent } from './usuario/pedidos/detalhes-pedido/detalhes-pedido-usuario.component'
 
 
 const APP_ROUTES: Routes = [
@@ -31,7 +33,9 @@ const APP_ROUTES: Routes = [
     { path: 'confirmacao', component: ConfirmacaoComponent, /*canActivate: [AuthGuard]*/},
     { path: 'p/produtos/add', component: AddProdutosComponent},
     { path: 'p/produtos/edit', component: EditProdutosComponent},
-    { path: 'p/home', component: DashHomeComponent}
+    { path: 'p/home', component: DashHomeComponent},
+    { path: 'u/pedidos', component: PedidosComponent},
+    { path: 'u/pedidos/detalhes', component: DetalhesPedidoUsuarioComponent} //detalhe de pedido do usuário
 
 ];
 
