@@ -22,6 +22,7 @@ import { DetalhesPedidoUsuarioComponent } from './usuario/pedidos/detalhes-pedid
 import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-usuario.component';
 import { PerfilComponent } from './usuario/perfil/perfil.component';
 import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
+import { HeaderService } from './header/header.service';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-per
     FormsModule,
     routing
   ],
-  providers: [AuthService],
+  providers: [AuthService, HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

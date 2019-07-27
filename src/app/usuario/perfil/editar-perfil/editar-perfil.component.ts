@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/header/header.service';
 
 @Component({
   selector: 'app-editar-perfil',
-  templateUrl: './editar-perfil.component.html',
-  styleUrls: ['./editar-perfil.component.css']
+  templateUrl: './editar-perfil.component.html'
 })
 export class EditarPerfilComponent implements OnInit {
 
-  constructor() { }
+  constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
+    this.headerService.exibirItemParaUsuario()
   }
 
 }
