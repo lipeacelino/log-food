@@ -17,6 +17,7 @@ import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedi
 import { AddProdutosComponent } from './dashboard/dash-produtos/add-produtos/add-produtos.component';
 import { EditProdutosComponent } from './dashboard/dash-produtos/edit-produtos/edit-produtos.component';
 import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
+import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-usuario.component';
 
 
 @NgModule({
@@ -34,7 +35,10 @@ import { DashHomeComponent } from './dashboard/dash-home/dash-home.component';
     DetalhesPedidosComponent,
     AddProdutosComponent,
     EditProdutosComponent,
+    CadastroUsuarioComponent,
     DashHomeComponent
+
+
   ],
   imports: [
     BrowserModule,
