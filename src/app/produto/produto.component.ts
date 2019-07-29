@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from '../header/header.service';
 
 @Component({
   selector: 'app-produto',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
+    this.headerService.exibirItemParaUsuario()
   }
 
 }
