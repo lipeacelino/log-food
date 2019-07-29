@@ -15,7 +15,7 @@ export class AuthService {
     if (usuario.email == "joao@gmail.com" && usuario.senha == "12345") {
       //o método deve redirecionar para a tela de lojas (padarias/lanchonetes)
       setTimeout(() => {this.router.navigate(['/lojas']);}, 1500);
-      sessionStorage.setItem('username', 'Felipe');
+      sessionStorage.setItem('username', 'joão');
       sessionStorage.setItem('tipoUsuario', 'comp');
       console.log("método invocado no service")
       this.usuarioStatusAutenticacao = true;
