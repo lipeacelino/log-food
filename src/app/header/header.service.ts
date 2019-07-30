@@ -5,26 +5,35 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderService {
 
-  visibUsuario: boolean = false;
-  visibProprietario: boolean = false;
+  visibPerfil: boolean = false;
+  visibPadarias: boolean = false;
+  
 
-  constructor() { this.visibProprietario=false, this.visibUsuario=false}
-
-  exibirItemParaUsuario () {
-    this.visibUsuario = true;
+  exibirPerfil () {
+    this.visibPerfil = true;
   }
 
-  ocultarItemDoUsuario () {
-    this.visibUsuario = false;
+  ocultarPerfil () {
+    this.visibPerfil = false;
   }
   
-  exibirItemParaProprietario () {
-    this.visibProprietario = true
+  exibirLinkPadarias () {
+    this.visibPadarias = true
   }
 
-  ocultarItemProrietario () {
-    this.visibProprietario = false
+  ocultarLinkPadarias () {
+    this.visibPadarias = false
   }
 
+  verifSeUsuarioIsComprador(): boolean {
+    if (sessionStorage.getItem('tipoUsuario') === 'comp') {
+      return true
+    }
+    return false
+  }
+
+  getUsername(): string {
+    return sessionStorage.getItem('username') 
+  }
 
 }

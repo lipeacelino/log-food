@@ -10,7 +10,8 @@ export class DetalhesPedidosComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
-    this.headerService.exibirItemParaUsuario()
+    this.headerService.ocultarLinkPadarias()
+    this.headerService.exibirPerfil()
   }
 
 }

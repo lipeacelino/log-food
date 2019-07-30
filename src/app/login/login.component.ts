@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.headerService.ocultarItemDoUsuario()
+    this.headerService.ocultarLinkPadarias()
+    this.headerService.ocultarPerfil()
   }
 
   fazerLogin(){

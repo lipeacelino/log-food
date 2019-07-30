@@ -10,7 +10,8 @@ export class HomeComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
-    this.headerService.ocultarItemDoUsuario()
+    this.headerService.ocultarLinkPadarias()
+    this.headerService.ocultarPerfil()
   }
 
 }

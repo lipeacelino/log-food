@@ -10,7 +10,8 @@ export class CarrinhoComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
-    this.headerService.exibirItemParaUsuario()
+    this.headerService.exibirPerfil()
+    this.headerService.exibirLinkPadarias()
   }
 
 }

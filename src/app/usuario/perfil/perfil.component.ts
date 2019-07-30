@@ -10,7 +10,8 @@ export class PerfilComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
-    this.headerService.exibirItemParaUsuario()
+    this.headerService.exibirLinkPadarias()
+    this.headerService.exibirPerfil()
   }
 
 }
