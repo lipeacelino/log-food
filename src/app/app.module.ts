@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CarrinhoService } from './service/carrinho.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -24,6 +26,7 @@ import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-us
 import { PerfilComponent } from './usuario/perfil/perfil.component';
 import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
 import { HeaderService } from './header/header.service';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -54,7 +57,7 @@ import { HeaderService } from './header/header.service';
     FormsModule,
     routing
   ],
-  providers: [AuthService, HeaderService],
+  providers: [CarrinhoService, AuthService, HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
