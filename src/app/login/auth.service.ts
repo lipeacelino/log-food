@@ -12,7 +12,7 @@ export class AuthService {
   //private usuarioStatusAutenticacao: boolean;
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email == "joao@gmail.com" && usuario.senha == "12345") {
+    if (usuario.email == "joao@gmail.com" && usuario.senha == "123456789") {
       //o método deve redirecionar para a tela de lojas (padarias/lanchonetes)
       setTimeout(() => {this.router.navigate(['/lojas']);}, 1500);
       sessionStorage.setItem('username', 'joão');
@@ -20,7 +20,7 @@ export class AuthService {
       console.log("método invocado no service")
       //this.usuarioStatusAutenticacao = true;
     } 
-    else if (usuario.email == "padaria@gmail.com" && usuario.senha == "12345") {
+    else if (usuario.email == "padaria@gmail.com" && usuario.senha == "123456789") {
       setTimeout(() => {this.router.navigate(['/p/home']);}, 1500);
       sessionStorage.setItem('username', 'padariaRT');
       sessionStorage.setItem('tipoUsuario', 'prop');
