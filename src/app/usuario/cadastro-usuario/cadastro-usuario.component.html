@@ -4,39 +4,52 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form role="form" _lpchecked="1">
+    <form [formGroup]="formulario" (ng-submit)="submit(formulario.value)">
       <div class="box-body">
         <div class="form-group">
           <label for="nome">Nome</label>
-          <input type="text" min="3" class="form-control" step=1 id="nome" placeholder="Nome"
-            autocomplete="off">
-            
+          <input formControlName="nome" type="text" class="form-control" id="nome" placeholder="Nome">
+          <div class="danger" *ngIf="!formulario.controls['nome'].valid && formulario.controls['nome'].touched">
+            Este campo é obrigatório. Digite apenas letras.</div>
         </div>
         <div class="form-group">
           <label for="sobrenome">Sobrenome</label>
-          <input type="text" min="3" class="form-control" step=1 id="sobrenome" placeholder="Sobrenome"
-            autocomplete="off">
+          <input formControlName="sobrenome" type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
+          <div class="danger" *ngIf="!formulario.controls['sobrenome'].valid && formulario.controls['sobrenome'].touched">
+            Este campo é obrigatório. Digite apenas letras.</div>
         </div>
         <div class="form-group">
           <label for="nome-do-produto">Email</label>
-          <input type="email" class="form-control" id="nome-do-produto" placeholder="Email" autocomplete="off">
-        </div>
-        <div class="form-group">
-          <label for="password1">Senha:</label>
-          <input type="password" class="form-control" id="password1" placeholder="Senha" autocomplete="off">
+          <input formControlName="email" type="email" class="form-control" id="nome-do-produto" placeholder="Email">
+          <div class="danger" *ngIf="!formulario.controls['email'].valid && formulario.controls['email'].touched">
+          Este campo é obrigatório. Digite um email válido.</div>
         </div>
         <div class="form-group">
           <label for="cpf">CPF:</label>
-          <input type="number" min=11 max=11 class="form-control" id="cpf" placeholder="CPF" autocomplete="off">
+          <input formControlName="cpf" type="text" class="form-control" id="cpf" placeholder="CPF">
+          <div class="danger" *ngIf="!formulario.controls['cpf'].valid && formulario.controls['cpf'].touched">
+          Este campo é obrigatório. Digite um CPF válido.</div>
+        </div>
+        <div class="form-group">
+          <label for="password1">Senha:</label>
+          <input formControlName="senha1" type="password" class="form-control" id="password1" placeholder="Senha">
+          <div class="danger" *ngIf="!formulario.controls['senha1'].valid && formulario.controls['senha1'].touched">
+              Este campo é obrigatório. A senha deve ter no mínimo 8 caracteres.</div>
         </div>
         <div class="form-group">
             <label for="password2">Repita a senha:</label>
-            <input type="password" class="form-control" id="password2" placeholder="Repita a senha" autocomplete="off">
-          </div>
+            <input formControlName="senha2" type="password" class="form-control" id="password2" placeholder="Repita a senha">
+            <div class="danger" *ngIf="!formulario.controls['senha2'].valid && formulario.controls['senha2'].touched">
+              Este campo é obrigatório. A senha deve ter no mínimo 8 caracteres.</div>
+            <br>
+            <div class="danger" *ngIf="formulario.value.senha1 != formulario.value.senha2">
+              <strong>As senhas não coincidem!</strong>
+            </div>  
+            </div>
         <div class="form-group">
-          <label for="exampleInputFile">Escolha uma foto de perfil</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Carregue a foto do no formato .png ou .img</p>
+          <label for="foto">Escolha uma foto de perfil</label>
+          <input formControlName="foto" type="file" id="foto" accept="image/png, image/jpeg">
+          <p class="help-block">Carregue a foto do no formato .png ou .jpg</p>
         </div>
   
   
@@ -52,8 +65,10 @@
   
       <div class="box-footer">
         <a [routerLink]="[ '/login' ]" type="submit" class="btn btn-default pull-left" style="width: 20%"> Cancelar</a>
-        <button type="submit" class="btn btn-primary pull-right" style="width: 20%"> Criar Conta</button>
+        <button [disabled]="!formulario.valid || formulario.value.senha1 != formulario.value.senha2" type="submit" class="btn btn-primary pull-right" style="width: 20%"> Criar Conta</button>
       </div>
+
+      <!-- {{ formulario.value | json}} -->
     </form>
   </div>
   
