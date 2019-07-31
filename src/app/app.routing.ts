@@ -40,7 +40,7 @@ const APP_ROUTES: Routes = [
     { path: 'p/home', component: DashHomeComponent, canActivate: [AuthGuard, ProprietarioGuard] },
     { path: 'u/pedidos', component: PedidosComponent, canActivate: [AuthGuard, CompradorGuard] },
     { path: 'u/pedidos/detalhes', component: DetalhesPedidoUsuarioComponent, canActivate: [AuthGuard, CompradorGuard] }, //detalhe de pedido do usuário
-    { path: 'u/cadastro', component: CadastroUsuarioComponent, canActivate: [CompradorGuard] },
+    { path: 'u/cadastro', component: CadastroUsuarioComponent },
     { path: 'u/perfil', component: PerfilComponent, canActivate: [AuthGuard, CompradorGuard]},
     { path: 'u/perfil/edit', component: EditarPerfilComponent, canActivate: [AuthGuard, CompradorGuard]}
 ];
