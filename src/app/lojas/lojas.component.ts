@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../header/header.service';
+import {LojaService} from './loja.service';
+import {Loja} from './loja/loja.model';
 
 @Component({
   selector: 'app-lojas',
   templateUrl: './lojas.component.html'
 })
 export class LojasComponent implements OnInit {
-
-  constructor(public headerService: HeaderService) { }
+  lojas: Loja [];
+  constructor(public headerService: HeaderService,
+              private lojaService: LojaService) { }
 
   ngOnInit() {
-    this.headerService.exibirLinkPadarias()
-    this.headerService.exibirPerfil()
+    this.headerService.exibirLinkPadarias(),
+    this.headerService.exibirPerfil(),
+    this.lojaService.Lojas()
+    .subscribe(lojas => this.lojas = lojas);
   }
 
 }

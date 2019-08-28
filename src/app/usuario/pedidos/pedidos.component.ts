@@ -10,8 +10,8 @@ export class PedidosComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit() {
-    this.headerService.exibirLinkPadarias()
-    this.headerService.exibirPerfil()
+    this.headerService.exibirLinkPadarias();
+    this.headerService.exibirPerfil();
   }
 
 }

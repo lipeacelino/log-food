@@ -5,35 +5,34 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderService {
 
-  visibPerfil: boolean = false;
-  visibPadarias: boolean = false;
-  
+  visibPerfil = false;
+  visibPadarias = false;
 
-  exibirPerfil () {
+  exibirPerfil() {
     this.visibPerfil = true;
   }
 
-  ocultarPerfil () {
+  ocultarPerfil() {
     this.visibPerfil = false;
   }
-  
-  exibirLinkPadarias () {
-    this.visibPadarias = true
+
+  exibirLinkPadarias() {
+    this.visibPadarias = true;
   }
 
-  ocultarLinkPadarias () {
-    this.visibPadarias = false
+  ocultarLinkPadarias() {
+    this.visibPadarias = false;
   }
 
   verifSeUsuarioIsComprador(): boolean {
     if (sessionStorage.getItem('tipoUsuario') === 'comp') {
-      return true
+      return true;
     }
-    return false
+    return false;
   }
 
   getUsername(): string {
-    return sessionStorage.getItem('username') 
+    return sessionStorage.getItem('username');
   }
 
 }
