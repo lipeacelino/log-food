@@ -6,8 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { DashPedidosComponent } from './dashboard/dash-pedidos/dash-pedidos.component';
 import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.component';
 import { LojasComponent } from './lojas/lojas.component';
-import { ProdutoComponent } from './produto/produto.component';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CarrinhoComponent } from './loja-detail/carrinho/carrinho.component';
 import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
 import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedidos/detalhes-pedidos.component';
 import {AddProdutosComponent} from './dashboard/dash-produtos/add-produtos/add-produtos.component';
@@ -32,9 +31,12 @@ export const APP_ROUTES: Routes = [
     { path: 'produtos', component: DashProdutosComponent, canActivate: [AuthGuard, ProprietarioGuard] },
     { path: 'p/pedidos/detalhes',
     component: DetalhesPedidosComponent, canActivate: [AuthGuard, ProprietarioGuard]}, // detalhe de pedidos proprietário
-    { path: 'lojas', component: LojasComponent, canActivate: [AuthGuard, CompradorGuard] },
-    { path: 'lojas/:id', component: LojasComponent},
-    { path: 'produto', component: ProdutoComponent, canActivate: [AuthGuard, CompradorGuard] },
+    { path: 'lojas', component: LojasComponent},
+    { path: 'lojas/:id', component: LojasComponent,
+        children: [
+            {path: '', redirectTo: 'lojas', pathMatch: 'full'},
+            {path: 'lojas', component: HomeComponent}
+        ]},
     { path: 'carrinho', component: CarrinhoComponent, canActivate: [AuthGuard, CompradorGuard] },
     { path: 'confirmacao', component: ConfirmacaoComponent, canActivate: [AuthGuard, CompradorGuard] },
     { path: 'p/produtos/add', component: AddProdutosComponent, canActivate: [AuthGuard, ProprietarioGuard] },

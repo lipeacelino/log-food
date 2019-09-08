@@ -4,7 +4,7 @@ import { RadioComponent } from './radio/radio.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { CarrinhoService } from '../carrinho/carrinho.service';
+import { CarrinhoService } from '../loja-detail/carrinho/carrinho.service';
 import { PedidoService } from '../pedido/pedido.service';
 import { LojaService } from '../lojas/loja.service';
 

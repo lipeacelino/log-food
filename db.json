@@ -53,7 +53,8 @@
       "imagePath": "assets/img/lojas/boanova.jpg",
       "about": "A doceria com mais tradição da cidade",
       "hours": "Funciona de segunda à sábado, de 8h às 23h"
-    } ],
+    } 
+  ],
     "menu": [
       {
         "id": "cup-cake",
@@ -94,8 +95,8 @@
         "description": "Batatas fritas crocantes",
         "price": 5.5,
         "restaurantId": "burger-house"
-      },
-
+      }
+    ],
   "posts": [
     {
       "id": 1,
@@ -110,8 +111,21 @@
       "postId": 1
     }
   ],
-  "pedidos": [],
-
+  "pedidos": [
+    {
+      "address": "agdass",
+      "number": "333",
+      "optionalAddress": "",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 3,
+          "menuId": "cup-cake"
+        }
+  ],
+  "id": 1
+    }
+],
   "profile": {
     "name": "typicode"
 } }

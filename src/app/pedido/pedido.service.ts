@@ -4,17 +4,18 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from 'rxjs/internal/Observable';
 import 'rxjs/add/operator/map';
 
-import {CarrinhoService} from '../carrinho/carrinho.service';
-import {CarrinhoItem} from '../carrinho/carrinho-item.model';
+import {CarrinhoService} from '../loja-detail/carrinho/carrinho.service';
+import {CarrinhoItem} from '../loja-detail/carrinho/carrinho-item.model';
 import {Pedido, PedidoItem} from './pedido.model';
 
 import {MEAT_API} from '../app.api';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class PedidoService {
 
   constructor(private carrinhoService: CarrinhoService,
-              private http: Http){}
+              private http: Http) {}
 
   itemsValue(): number {
     return this.carrinhoService.total()
@@ -46,8 +47,6 @@ export class PedidoService {
     return this.http.post(`${MEAT_API}/pedidos`,
                           JSON.stringify(Pedido),
                           new RequestOptions({headers}))
-                    .map(response=> response.json())
-                    .map(pedido => pedido.id)
-  
-
-}
+                          .map(response => response.json())
+                          .map(pedido => pedido.id)
+                        }}

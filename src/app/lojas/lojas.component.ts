@@ -15,7 +15,7 @@ export class LojasComponent implements OnInit {
   ngOnInit() {
     this.headerService.exibirLinkPadarias(),
     this.headerService.exibirPerfil(),
-    this.lojaService.Lojas()
+    this.lojaService.lojas()
     .subscribe(lojas => this.lojas = lojas);
   }
 

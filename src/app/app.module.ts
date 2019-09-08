@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, PreloadAllModules, ROUTES } from '@angular/router';
+import { RouterModule, PreloadAllModules} from '@angular/router';
+import {APP_ROUTES} from './app.routing';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -14,8 +15,7 @@ import { routing } from './app.routing';
 import { AuthService } from './login/auth.service';
 import { DashPedidosComponent } from './dashboard/dash-pedidos/dash-pedidos.component';
 import { DashProdutosComponent } from './dashboard/dash-produtos/dash-produtos.component';
-import { ProdutoComponent } from './produto/produto.component';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CarrinhoComponent } from './loja-detail/carrinho/carrinho.component';
 import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
 import { DetalhesPedidosComponent } from './dashboard/dash-pedidos/detalhes-pedidos/detalhes-pedidos.component';
 import { AddProdutosComponent } from './dashboard/dash-produtos/add-produtos/add-produtos.component';
@@ -28,20 +28,23 @@ import { PerfilComponent } from './usuario/perfil/perfil.component';
 import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
 import { HeaderService } from './header/header.service';
 import { LojaComponent } from './lojas/loja/loja.component';
-import { MenuItemComponent } from './menu-item/menu-item.component';
 import { PedidoComponent } from './pedido/pedido.component';
 import { SharedModule } from './shared/shared.module';
-
+import {PedidoItemsComponent} from './pedido/pedido-items/pedido-items.component';
+import { DeliveryCostsComponent } from './pedido/delivery-costs/delivery-costs.component';
+import { LojaDetailComponent } from './loja-detail/loja-detail.component';
+import { MenuItemComponent } from './loja-detail/menu-item/menu-item.component';
+import { MenuComponent } from './loja-detail/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
     HeaderComponent,
     HomeComponent,
     LoginComponent,
     DashPedidosComponent,
     DashProdutosComponent,
     LojasComponent,
-    ProdutoComponent,
     CarrinhoComponent,
     ConfirmacaoComponent,
     DetalhesPedidosComponent,
@@ -55,7 +58,10 @@ import { SharedModule } from './shared/shared.module';
     EditarPerfilComponent,
     LojaComponent,
     MenuItemComponent,
-    PedidoComponent
+    PedidoComponent,
+    PedidoItemsComponent,
+    DeliveryCostsComponent,
+    LojaDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,7 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     routing,
     SharedModule.forRoot(),
-    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
+    RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules}),
   ],
   providers: [{provide : LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]

@@ -6,14 +6,14 @@ import { PedidoItemsComponent } from './pedido-items/pedido-items.component';
 import { SharedModule } from '../shared/shared.module';
 
 const ROUTES: Routes = [
-    {'path': '', component: PedidoComponent}
-]
+    {path: '', component: PedidoComponent}
+];
 
 @NgModule({
-    declarations:[PedidoComponent, PedidoItemsComponent, DeliveryCostsComponent],
-    imports:[SharedModule, RouterModule.forChild(ROUTES)]
+    declarations: [PedidoComponent, PedidoItemsComponent, DeliveryCostsComponent],
+    imports: [SharedModule, RouterModule.forChild(ROUTES)]
 })
 
-export class PedidoModule{
+export class PedidoModule {
 
 }

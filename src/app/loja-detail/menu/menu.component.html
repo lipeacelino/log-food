@@ -1,0 +1,10 @@
+<div class="col-md-9 col-xs-12">
+
+    <app-menu-item
+      *ngFor="let item of menu | async"
+      [menuItem]="item" (add)="carrinho.addItem($event)" ></app-menu-item>    
+
+</div>
+<div class="col-md-3 col-xs-12">
+  <app-carrinho #carrinho></app-carrinho>
+</div>

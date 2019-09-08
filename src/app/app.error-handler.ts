@@ -1,4 +1,3 @@
-import {Response} from '@angular/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 export class ErrorHandler {

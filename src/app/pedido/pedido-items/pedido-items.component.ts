@@ -1,9 +1,9 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { CarrinhoItem } from 'src/app/carrinho/carrinho-item.model';
+import { CarrinhoItem } from 'src/app/loja-detail/carrinho/carrinho-item.model';
 
 @Component({
-  selector: 'app-pedido-item',
-  templateUrl: './pedido-item.component.html',
+  selector: 'app-pedido-items',
+  templateUrl: './pedido-items.component.html',
 })
 export class PedidoItemsComponent implements OnInit {
 

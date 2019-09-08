@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CarrinhoItem } from '../carrinho/carrinho-item.model';
+import { CarrinhoItem } from '../loja-detail/carrinho/carrinho-item.model';
 import { PedidoItem, Pedido } from './pedido.model';
 import { PedidoService } from './pedido.service';
 import { RadioOption } from '../shared/radio/radio-option.model';
@@ -28,7 +28,8 @@ export class PedidoComponent implements OnInit {
               private router: Router,
               private formBuilder: FormBuilder) { }
 
-  ngOnInit() {this.pedidoForm = this.formBuilder.group({
+  ngOnInit() {this.pedidoForm =
+    this.formBuilder.group({
     name: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
     email: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
     emailConfirmation: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
