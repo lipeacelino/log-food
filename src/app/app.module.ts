@@ -28,13 +28,15 @@ import { PerfilComponent } from './usuario/perfil/perfil.component';
 import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
 import { HeaderService } from './header/header.service';
 import { LojaComponent } from './lojas/loja/loja.component';
-import { PedidoComponent } from './pedido/pedido.component';
 import { SharedModule } from './shared/shared.module';
-import {PedidoItemsComponent} from './pedido/pedido-items/pedido-items.component';
-import { DeliveryCostsComponent } from './pedido/delivery-costs/delivery-costs.component';
 import { LojaDetailComponent } from './loja-detail/loja-detail.component';
 import { MenuItemComponent } from './loja-detail/menu-item/menu-item.component';
 import { MenuComponent } from './loja-detail/menu/menu.component';
+import { registerLocaleData } from '@angular/common';
+import localept from '@angular/common/locales/pt';
+registerLocaleData(localept, 'pt');
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,9 +60,6 @@ import { MenuComponent } from './loja-detail/menu/menu.component';
     EditarPerfilComponent,
     LojaComponent,
     MenuItemComponent,
-    PedidoComponent,
-    PedidoItemsComponent,
-    DeliveryCostsComponent,
     LojaDetailComponent
   ],
   imports: [
@@ -72,7 +71,7 @@ import { MenuComponent } from './loja-detail/menu/menu.component';
     SharedModule.forRoot(),
     RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules}),
   ],
-  providers: [{provide : LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [{provide : LOCALE_ID, useValue: 'pt'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

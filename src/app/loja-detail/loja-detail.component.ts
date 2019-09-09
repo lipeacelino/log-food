@@ -15,7 +15,7 @@ export class LojaDetailComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.lojaService.lojaById(this.route.snapshot.params['id'])
+    this.lojaService.lojaById(this.route.snapshot.params.id)
     .subscribe(loja => this.loja = loja)
   }
 

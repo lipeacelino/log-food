@@ -45,8 +45,9 @@ export class PedidoService {
     const headers = new Headers()
     headers.append('Content-Type', 'application/json')
     return this.http.post(`${MEAT_API}/pedidos`,
-                          JSON.stringify(Pedido),
+                          JSON.stringify(pedido),
                           new RequestOptions({headers}))
-                          .map(response => response.json())
-                          .map(pedido => pedido.id)
-                        }}
+                    .map(response => response.json())
+                    .map(pedido => pedido.id);
+   }
+}

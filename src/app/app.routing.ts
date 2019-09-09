@@ -19,6 +19,8 @@ import { PerfilComponent } from './usuario/perfil/perfil.component';
 import { EditarPerfilComponent } from './usuario/perfil/editar-perfil/editar-perfil.component';
 import { ProprietarioGuard } from './guards/proprietario.guard';
 import { CompradorGuard } from './guards/comprador.guard';
+import { LojaDetailComponent } from './loja-detail/loja-detail.component';
+import { MenuComponent } from './loja-detail/menu/menu.component';
 
 export const APP_ROUTES: Routes = [
     // as rotas devem ser colocadas aqui
@@ -32,19 +34,18 @@ export const APP_ROUTES: Routes = [
     { path: 'p/pedidos/detalhes',
     component: DetalhesPedidosComponent, canActivate: [AuthGuard, ProprietarioGuard]}, // detalhe de pedidos proprietário
     { path: 'lojas', component: LojasComponent},
-    { path: 'lojas/:id', component: LojasComponent,
+    { path: 'lojas/:id', component: LojaDetailComponent,
         children: [
-            {path: '', redirectTo: 'lojas', pathMatch: 'full'},
-            {path: 'lojas', component: HomeComponent}
+            {path: '', redirectTo: 'menu', pathMatch: 'full'},
+            {path: 'menu', component: MenuComponent}
         ]},
     { path: 'carrinho', component: CarrinhoComponent, canActivate: [AuthGuard, CompradorGuard] },
     { path: 'confirmacao', component: ConfirmacaoComponent, canActivate: [AuthGuard, CompradorGuard] },
     { path: 'p/produtos/add', component: AddProdutosComponent, canActivate: [AuthGuard, ProprietarioGuard] },
     { path: 'p/produtos/edit', component: EditProdutosComponent, canActivate: [AuthGuard, ProprietarioGuard] },
     { path: 'p/home', component: DashHomeComponent, canActivate: [AuthGuard, ProprietarioGuard] },
-    { path: 'u/pedidos', loadChildren: './pedido/pedido.module#PedidoModule', canActivate: [AuthGuard, CompradorGuard] },
-    { path: 'u/pedidos/detalhes',
-    component: DetalhesPedidoUsuarioComponent, canActivate: [AuthGuard, CompradorGuard] },
+    { path: 'pedido', loadChildren: './pedido/pedido.module#PedidoModule'},
+    { path: 'confirmacao', component: ConfirmacaoComponent},
      // detalhe de pedido do usuário
     { path: 'u/cadastro', component: CadastroUsuarioComponent },
     { path: 'u/perfil', component: PerfilComponent, canActivate: [AuthGuard, CompradorGuard]},

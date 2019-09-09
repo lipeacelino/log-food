@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR,ControlValueAccessor } from '@angular/forms';
 import { RadioOption } from './radio-option.model';
 
 @Component({
@@ -13,7 +13,7 @@ import { RadioOption } from './radio-option.model';
     }
   ]
 })
-export class RadioComponent implements OnInit {
+export class RadioComponent implements OnInit, ControlValueAccessor {
 
   @Input() options: RadioOption[]
   value: any ;
@@ -24,7 +24,7 @@ export class RadioComponent implements OnInit {
   ngOnInit() {
   }
   setValue(value: any){
-    this.value =value
+    this.value = value;
     this.onChange=(this.value)
   }
   /**

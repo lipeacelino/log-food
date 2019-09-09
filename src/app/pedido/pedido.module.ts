@@ -6,7 +6,7 @@ import { PedidoItemsComponent } from './pedido-items/pedido-items.component';
 import { SharedModule } from '../shared/shared.module';
 
 const ROUTES: Routes = [
-    {path: '', component: PedidoComponent}
+    {'path': '', component: PedidoComponent}
 ];
 
 @NgModule({

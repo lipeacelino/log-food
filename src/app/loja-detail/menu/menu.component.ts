@@ -10,13 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  menu: Observable<MenuItem>;
+  menu: Observable<MenuItem[]>;
 
   constructor(private lojaService: LojaService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.menu = this.lojaService.menuOfLoja(this.route.parent.snapshot.params['id']);
+    this.menu = this.lojaService.menuOfLoja(this.route.parent.snapshot.params.id);
   }
 
     addMenuItem(item: MenuItem) {

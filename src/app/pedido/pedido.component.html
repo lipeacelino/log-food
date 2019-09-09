@@ -4,8 +4,7 @@
 
     <section class="content">
       <section class="invoice">              
-
-            <form [formGroup]="orderForm" novalidate>
+            <form [formGroup]="pedidoForm" novalidate>
               <div class="row">
                 <div class="col-xs-12">
                   <h2 class="page-header">
@@ -68,7 +67,7 @@
                   <p class="lead">Itens do Pedido:</p>
                 </div>
 
-                <app-pedido-items [items]="cartItems()"
+                <app-pedido-items [items]="carrinhoItems()"
                       (increaseQty)="increaseQty($event)"
                       (decreaseQty)="decreaseQty($event)"
                       (remove)="remove($event)"></app-pedido-items>
@@ -80,9 +79,9 @@
                 <!-- accepted payments column -->
                 <div class="col-sm-6 col-xs-12">
                   <p class="lead">Formas de Pagamento:</p>
-
+                  
                     <div class="form-group">
-                       <app-radio [options]="paymentOptions" formControlName="paymentOption" ></app-radio>
+                       <app-radio [options]="paymentOptions" formControlName="paymentOption"></app-radio>
                     </div>
 
                 </div>
@@ -101,8 +100,8 @@
 
             <div class="row">
               <div class="col-xs-12">
-                <button (click)="checkOrder(orderForm.value)" class="btn btn-success pull-right"
-                  [disabled]="!orderForm.valid || cartItems().length === 0">
+                <button (click)="checkPedido(pedidoForm.value)" class="btn btn-success pull-right"
+                  >
                     <i class="fa fa-credit-card"></i> Concluir Pedido
                 </button>
               </div>

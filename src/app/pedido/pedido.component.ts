@@ -18,25 +18,26 @@ export class PedidoComponent implements OnInit {
 
   numberPattern = /^[0-9]*$/;
 
-  delivery = 8;
+  delivery: number  = 8;
   paymentOptions: RadioOption[] = [
     {label: 'Dinheiro', value: 'MON'},
     {label: 'Cartão de Débito', value: 'DEB'},
-    {label: 'Cartão Refeição', value: 'REF'}
+    {label: 'Vale Refeição', value: 'REF'}
   ];
   constructor(private pedidoService: PedidoService,
               private router: Router,
               private formBuilder: FormBuilder) { }
 
-  ngOnInit() {this.pedidoForm =
-    this.formBuilder.group({
-    name: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
-    email: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
+ngOnInit() {
+  this.pedidoForm = this.formBuilder.group({
+    name: this.formBuilder.control('',[Validators.required, Validators.minLength(5)]),
+    email: this.formBuilder.control('',[Validators.required, Validators.pattern(this.emailPattern)]),
     emailConfirmation: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
-    address: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
-    number: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
+    address: this.formBuilder.control('',[Validators.required, Validators.minLength(5)]),
+    number: this.formBuilder.control('',[Validators.required, Validators.pattern(this.numberPattern)]),
     optionalAddress: this.formBuilder.control(''),
-    paymentOption: this.formBuilder.control('', [Validators.required])});
+    paymentOption: this.formBuilder.control('', [Validators.required])
+  })
 }
   itemsValue(): number {
     return this.pedidoService.itemsValue();
@@ -57,7 +58,7 @@ export class PedidoComponent implements OnInit {
   remove(item: CarrinhoItem) {
     this.pedidoService.remove(item);
   }
-  heckOrder(pedido: Pedido) {
+  checkPedido(pedido: Pedido) {
     pedido.pedidoItems = this.carrinhoItems()
       .map((item: CarrinhoItem) => new PedidoItem(item.quantity, item.menuItem.id));
     this.pedidoService.checkPedido(pedido)
@@ -65,7 +66,9 @@ export class PedidoComponent implements OnInit {
         this.router.navigate(['/confirmacao']);
         this.pedidoService.clear();
     });
-    console.log(pedido);
+    console.log("Um",pedido);
+
+
   }
 
 }

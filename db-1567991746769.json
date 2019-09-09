@@ -3,7 +3,7 @@
     {
       "id": "steak-burger",
       "name": "Steak Burger",
-      "category": "Hamburguers",
+      "category": "Bakery",
       "deliveryEstimate": "25m",
       "imagePath": "assets/img/lojas/steak.jpg",
       "about": "A Bread & Brakery tem 40 anos de mercado. Fazemos os melhores doces e pães. Compre e confira.",
@@ -12,7 +12,7 @@
     {
       "id": "na-boa",
       "name": "Na Boa Lanchonete",
-      "category": "Lanches",
+      "category": "Hamburgers",
       "deliveryEstimate": "100m",
       "imagePath": "assets/img/lojas/naboa.jpg",
       "about": "40 anos se especializando em trash food.",
@@ -21,7 +21,7 @@
     {
       "id": "flor-campo",
       "name": "Panificadora Flor do Campo",
-      "category": "Pães",
+      "category": "Coffee Shop",
       "deliveryEstimate": "30-40m",
       "imagePath": "assets/img/lojas/flordocampo.jpg",
       "about": "A Coffe Corner foi eleita a melhor cafeteria da cidade.",
@@ -30,7 +30,7 @@
     {
       "id": "morada-sol",
       "name": "Padaria Morada do Sol",
-      "category": "Pães",
+      "category": "Saudável",
       "deliveryEstimate": "75m",
       "imagePath": "assets/img/lojas/moradadosol.jpg",
       "about": "Comida saudável é no Green Food. Compramos barato, vendemos caro. ;)",
@@ -39,7 +39,7 @@
     {
       "id": "face-burg",
       "name": "Faceburg",
-      "category": "Hamburguers",
+      "category": "Ice Creams",
       "deliveryEstimate": "40-65m",
       "imagePath": "assets/img/lojas/faceburg.png",
       "about": "A Ice Cream é uma sorveteria inovadora.",
@@ -48,7 +48,7 @@
     {
       "id": "boa-nova",
       "name": "Boa Nova",
-      "category": "Lanches",
+      "category": "Doces",
       "deliveryEstimate": "20m",
       "imagePath": "assets/img/lojas/boanova.jpg",
       "about": "A doceria com mais tradição da cidade",
@@ -124,22 +124,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "name": "Alex A",
-      "email": "alex@com.br",
-      "emailConfirmation": "alex@com.br",
-      "address": "Rua nova",
-      "number": "123456",
-      "optionalAddress": "156",
-      "paymentOption": "",
-      "pedidoItems": [
-        {
-          "quantity": 3,
-          "menuId": "triplo"
-        }
-      ],
-      "id": 2
     }
   ],
   "profile": {

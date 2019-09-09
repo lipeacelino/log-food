@@ -31,8 +31,10 @@ export class CarrinhoService {
         this.items.splice(this.items.indexOf(item), 1);
 
     }
-  total(): number{
-        return this.items.map(item => item.value()).reduce((prev, value) => prev + value, 0);
+  total(): number {
+        return this.items
+        .map(item => item.value())
+        .reduce((prev, value) => prev + value, 0);
 
     }
 }
