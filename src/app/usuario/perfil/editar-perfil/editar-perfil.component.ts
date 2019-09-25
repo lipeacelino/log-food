@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/header/header.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -10,7 +10,7 @@ export class EditarPerfilComponent implements OnInit {
 
   constructor(public headerService: HeaderService, private fb: FormBuilder) { }
 
-  formulario: FormGroup
+  formulario: FormGroup;
 
   ngOnInit() {
     this.formulario = this.fb.group({
@@ -20,9 +20,9 @@ export class EditarPerfilComponent implements OnInit {
       senha1: [null, Validators.compose([Validators.required, Validators.minLength(8)])],
       senha2: [null, Validators.compose([Validators.required, Validators.minLength(8)])],
       foto: [null, '' ]
-    })
-    this.headerService.exibirLinkPadarias()
-    this.headerService.exibirPerfil()
+    });
+    this.headerService.exibirLinkPadarias();
+    this.headerService.exibirPerfil();
   }
 
 }

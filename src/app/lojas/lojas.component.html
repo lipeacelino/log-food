@@ -1,6 +1,7 @@
-<!-- INÍCIO DO CONTEÚDO -->
+<!-- Head -->
 <section class="content-header">
 </section> 
+<!-- Body -->
 <section class="content">
       <div class="content-wrapper">
           <div class="container">
@@ -9,131 +10,14 @@
               <h1>Padarias / Lanchonetes</h1>
             </section> 
             <!--Blocos-->
-            <section class="content">
-      
+            <section class="content"> 
               <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                        <!--Detalhe da Loja-->
-                        <a [routerLink]="[ '/produto']">
-                          <div class="place-info-box">
-                            <span class="place-info-box-icon"><img src="/assets/img/lojas/bomgosto.jpg" /></span>
-      
-                            <div class="place-info-box-content">
-                              <span class="place-info-box-text">Hamburgueria Bom Gosto</span>
-                              <span class="place-info-box-detail"><p>Mamanguape</p></span>
-                              <span class="place-info-box-detail"></span>
-                            </div>
-                            <!-- /.info-box-content -->
-                          </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-      
-                      <div class="col-sm-6 col-xs-12">
-                          <a [routerLink]="[ '/produto']">
-                        <div class="place-info-box">
-                          <span class="place-info-box-icon"><img src="/assets/img/lojas/flordocampo.jpg" /></span>
-      
-                          <div class="place-info-box-content">
-                            <span class="place-info-box-text">Panificadora Flor do Campo</span>
-                            <span class="place-info-box-detail"></span>
-                            <span class="place-info-box-detail">Rio Tinto</span>
-      
-                          </div>
-                          <!-- /.info-box-content -->
-                        </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-      
-                      <div class="col-sm-6 col-xs-12">
-                          <a [routerLink]="[  '/produto' ]">
-                        <div class="place-info-box">
-                          <span class="place-info-box-icon"><img src="/assets/img/lojas/naboa.jpg" /></span>
-      
-                          <div class="place-info-box-content">
-                            <span class="place-info-box-text">Na Boa - Lanchonete e Tapiocaria</span>
-                            <div class="place-info-box-detail">
-                            </div>
-                            <span class="place-info-box-detail">Rio Tinto</span>
-      
-                          </div>
-                          <!-- /.info-box-content -->
-                      
-                        </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-      
-                      <div class="col-sm-6 col-xs-12">
-                        <a [routerLink]="[  '/produto' ]">
-                        <div class="place-info-box">
-                          <span class="place-info-box-icon"><img src="/assets/img/lojas/steak.jpg" /></span>
-      
-                          <div class="place-info-box-content">
-                            <span class="place-info-box-text">Steak Burger
-                            </span>
-                            <div class="place-info-box-detail"></div>
-                            <span class="place-info-box-detail">Mamanguape</span>
-      
-                          </div>
-                          <!-- /.info-box-content -->
-                        </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-                      <div class="col-sm-6 col-xs-12">
-                          <a [routerLink]="[  '/produto' ]">
-
-                        <div class="place-info-box">
-                          <span class="place-info-box-icon"><img src="/assets/img/lojas/boanova.jpg" /></span>
-      
-                          <div class="place-info-box-content">
-                            <span class="place-info-box-text">Boa Nova - Pizzaria e Lanchonete</span>
-                            <div class="place-info-box-detail"></div>
-                            <span class="place-info-box-detail">Mamanguape</span>
-      
-                          </div>
-                          <!-- /.info-box-content -->
-                        </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-      
-                      <div class="col-sm-6 col-xs-12">
-                          <a [routerLink]="[  '/produto' ]">
-                        <div class="place-info-box">
-                          <span class="place-info-box-icon"><img src="/assets/img/lojas/faceburg.png" /></span>
-      
-                          <div class="place-info-box-content">
-                            <span class="place-info-box-text">Faceburg</span>
-                            <span class="place-info-box-detail"><p>Rio Tinto</p></span>
-                            <span class="place-info-box-detail"></span>
-      
-                          </div>
-                          <!-- /.info-box-content -->
-                        </div>
-                        </a>
-                        <!-- /.info-box -->
-                      </div>
-                      <!-- /.col -->
-      
+                      <div *ngFor="let loja of lojas " class="col-sm-6 col-xs-12">
+                        <app-loja [loja]="loja"></app-loja>
                     </div>
-      
+                </div>
             </section>
-      
-            <!-- FIM  do CONTEÚDO -->
-      
-            <!-- /.content -->
-          </div>
-          <!-- /.container -->
-        </div>
-        
+            
         <nav aria-label="Navegação de página">
           <ul class="pagination">
             <li class="page-item"><a class="page-link" >Anterior</a></li>
@@ -143,5 +27,7 @@
             <li class="page-item"><a class="page-link" >Próximo</a></li>
           </ul>
         </nav>
-  </section>
-  <!-- FIM DO CONTEÚDO -->
+      </div>
+      </div>
+<!-- Fim do Body -->
+</section>

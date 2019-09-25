@@ -15,13 +15,12 @@ export class CompradorGuard implements CanActivate {
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree | boolean {
     if (sessionStorage.getItem('tipoUsuario') === 'comp') {
       return true;
-    }
-    else if (sessionStorage.getItem('tipoUsuario') === 'prop') {
+    } else if (sessionStorage.getItem('tipoUsuario') === 'prop') {
       this.router.navigate(['/p/home']);
       return false;
     }
-    this.router.navigate(['/home'])
-    return false
+    this.router.navigate(['/home']);
+    return false;
   }
 }
 

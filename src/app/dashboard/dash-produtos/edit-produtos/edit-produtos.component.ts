@@ -10,12 +10,13 @@ export class EditProdutosComponent implements OnInit {
 
   constructor(public headerService: HeaderService, private fb: FormBuilder) { }
 
-  formulario: FormGroup
+  formulario: FormGroup;
 
   ngOnInit() {
     this.formulario = this.fb.group({
       codigo: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.pattern(/[0-9]+$/)])],
-      quantidade: [null, Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(11), Validators.pattern(/[0-9]+$/)])],
+      quantidade: [null, Validators.compose([Validators.required, Validators.minLength(1),
+                                           Validators.maxLength(11), Validators.pattern(/[0-9]+$/)])],
       nomeProduto: [null, Validators.compose([Validators.pattern(/[a-z\s]+$/), Validators.required])],
       descricao: [null, Validators.compose([Validators.pattern(/[a-z\s]+$/), Validators.required])],
       preco: [null, Validators.compose([Validators.pattern(/([0-9]{1,3}\.)?[0-9]{1,3},[0-9]{2}$/), Validators.required])],
